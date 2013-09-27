@@ -9,9 +9,9 @@ namespace Practica4
 		}
 		
 		public double telefono;
-		public double facebook;
+		public string facebook;
 		public string nombre;
-		public string codigo;
+		public double codigo;
 		
 	}
 }
