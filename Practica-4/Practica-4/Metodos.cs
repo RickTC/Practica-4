@@ -122,7 +122,24 @@ namespace Practica4
 			}
 				
 		}
+		public void mostrar()
+		{
 			
+			IDictionaryEnumerator mos = h.GetEnumerator();
+			
+			while(mos.MoveNext())
+			{
+				
+				Persona mus = new Persona();
+				mus = (Persona)(h[mos.Key]);
+				
+				Console.WriteLine("Codigo: "+ mus.codigo);
+				Console.WriteLine ("Nombre: "+ mus.nombre);
+				Console.WriteLine ("Facebook: "+ mus.facebook);
+				Console.WriteLine ("Telefono: "+ mus.telefono);
+				
+			}
+		}
 		
 	}
 }
