@@ -81,11 +81,47 @@ namespace Practica4
 				System.Threading.Thread.Sleep(1000);	
 				Console.Clear();
 					
-				
 			}
 			
 		}	
-			
+		
+		public void eliminar()
+		{
+		
+			for(int i=0; i<2; i++)
+			{
+				Console.WriteLine("Ingrese el codigo del elemento a ELIMINAR");
+				double codigo= double.Parse(Console.ReadLine());
+				
+				if (h.ContainsKey(codigo)==true)
+				{	
+					Console.WriteLine("Seguro de que quiere ELIMINAR");
+					Console.WriteLine("1-SI\n 2- NO");
+					int op=int.Parse(Console.ReadLine());
+					
+					if(op==1)
+					{
+						h.Remove(codigo);
+					}
+					else
+					{
+						Console.WriteLine("No se elimino nada");
+					}	
+						
+				}
+				else
+				{
+				 
+					Console.WriteLine("El codigo no existe ");
+					
+				}
+				
+				Console.WriteLine("Se elimino los datos");
+				System.Threading.Thread.Sleep(1000);
+				Console.Clear();
+			}
+				
+		}
 			
 		
 	}
